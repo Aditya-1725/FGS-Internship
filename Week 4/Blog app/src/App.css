@@ -68,7 +68,11 @@ button:hover {
 .home {
   padding: 20px;
 }
-
+.dark .home{
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
 .post-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -92,6 +96,7 @@ button:hover {
 .post-card h2 {
   margin-top: 10px;
   font-size: 20px;
+  color: #000;
 }
 
 .post-card p {

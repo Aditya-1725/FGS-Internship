@@ -74,16 +74,16 @@ function Contact() {
 //  All Components mixed together Day 2 Routes to pages
 export default function App() {
   return ( 
-    <BrowserRouter> // Enables Routing to pages 
+    <BrowserRouter> {/*Enables Routing to pages*/}
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link> // Nav Bar elements list
+        <Link to="/about">About</Link> {/*Nav Bar elements list*/}
         <Link to="/contact">Contact</Link>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} /> // Navigation list onclick we can go to particular page
+        <Route path="/about" element={<About />} /> {/*Navigation list onclick we can go to particular page*/}
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
