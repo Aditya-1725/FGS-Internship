@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(110deg, #19192d,#14174b)
+}
+
+/* Container Styling */
+.container {
+    background: transparent;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px #0ff;
+    color: white;
+    width: 400px;
+}
+
+/* Input Styling */
+input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(110deg, rgb(1, 148, 148), rgb(57, 126, 222));
+    border: none;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(110deg, rgb(86, 151, 240),rgb(1, 148, 148));
+    box-shadow: 0px 5px 10px #00bfff;
+    font-weight: 500;
+}
+
+/* Result Text */
+#result {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(2, 255, 255);
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #1a1a2e, #0f3460);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    #quote-box {
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    #quote {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    #author {
+      font-size: 0.9rem;
+      color: #e94560;
+    }
+
+    button {
+      background-color: #0f3460;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e94560;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Bhide ke Suvichar</h1>
+    <div id="quote-box">
+      <p id="quote">Loading quote...</p>
+      <span id="author">~ Please wait</span>
+    </div>
+    <button id="new-quote">New Quote</button>
+  </div>
+
+  <script type="module">
+    const quoteEl = document.getElementById("quote");
+    const authorEl = document.getElementById("author");
+    const button = document.getElementById("new-quote");
+
+    const fetchQuote = async () => {
+      try {
+        quoteEl.textContent = "Loading...";
+        authorEl.textContent = "";
+
+        // const res = await fetch("https://dummyjson.com/quotes/random");
+         const res = await fetch("https://hindi-quotes.vercel.app/random");
+        const data = await res.json();
+
+        quoteEl.textContent = `"${data.quote}"`;
+        authorEl.textContent = `~ ${data.author}`;
+      } catch (err) {
+        quoteEl.textContent = "Failed to fetch quote. Try again!";
+        authorEl.textContent = "~ Error";
+        console.error(err);
+      }
+    };
+
+    button.addEventListener("click", fetchQuote);
+    fetchQuote(); // Fetch first quote on load
+  </script>
+
+</body>
+</html>

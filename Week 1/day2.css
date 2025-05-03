@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #1a1a2e, #0f3460);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Title Styling */
+h2 {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Layout using Grid */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Input & Textarea Styling */
+input, textarea {
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #e94560, #ff007f); /* Vibrant Red to Neon Pink */
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff007f, #e94560);
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.6);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}

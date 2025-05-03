@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 2 Day 2</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0ab3f1,#024cea);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      font-size: 1.3rem;
+    }
+    .user-list {
+      margin-top: 10px;
+    }
+    .user-list li {
+      margin: 5px 0;
+    }
+  </style>
+  <!-- CSS COMPLETE -->
+</head>
+<body>
+
+  <h2>User Names</h2>
+  <ul class="user-list" id="userList"></ul>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const users = [
+      { id: 1, name: "Aditya", age: 22, email: "adi@example.com" },
+      { id: 2, name: "Neha", age: 25, email: "neha@example.com" },
+      { id: 3, name: "Ravi", age: 19, email: "ravi@example.com" },
+      { id: 4, name: "Sara", age: 30, email: "sara@example.com" }
+    ];
+
+    const names = users.map(user => user.name);
+
+    const userList = document.getElementById("userList");
+    names.forEach(name => {
+      const li = document.createElement("li");
+      li.textContent = `${name}`;
+      userList.appendChild(li);
+    });
+
+    console.log("Object.keys example:", Object.keys(users[0])); // ['id', 'name', 'age', 'email']
+    console.log("Object.values example:", Object.values(users[0])); // [1, 'Aditya', 22, 'adi@example.com']
+
+    const adults = users.filter(user => user.age >= 21);
+    console.log("Adults (21+):", adults.map(u => u.name));
+
+    const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+    console.log("Total Age of all users:", totalAge);
+  </script>
+
+</body>
+</html>

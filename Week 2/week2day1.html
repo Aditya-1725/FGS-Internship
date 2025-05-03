@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Even Number Filter</title>
+  <style>
+    body {
+    background: linear-gradient(135deg,#7a55e9,#54a2d5);
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px #0f3460;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  button {
+    margin-top: 35px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg,#7df2c3,#e9dc32);
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px #a3d079;
+  }
+  
+  button:hover {
+    background-color: #e94560;
+  }
+  
+  button:active{
+    transform: scale(0.9) translateY(3px);
+  }
+
+  #output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #00ffcc;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Even Number Filter</h1>
+    <input type="text" id="numberInput" placeholder="Enter numbers separated by commas"/>
+    <button onclick="filterEvenNumbers()">Filter Even Numbers</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    const filterEvenNumbers = () => {
+  const input = document.getElementById("numberInput").value.trim();
+  const output = document.getElementById("output");
+
+  if (!input) {
+    output.textContent = "Please enter some numbers.";
+    return;
+  }
+
+  const validFormat = /^\d+(\s*,\s*\d+)*$/;
+  if (!validFormat.test(input)) {
+    output.textContent = "Invalid input! Enter only numbers separated by commas.";
+    return;
+  }
+
+  const numbers = input.split(",").map(num => Number(num.trim()));
+
+  if (numbers.some(num => isNaN(num))) {
+    output.textContent = "Please enter valid numbers only!";
+    return;
+  }
+
+  if (numbers.some(num => num < 0)) {
+    output.textContent = "Negative numbers detected! Please enter only positive numbers.";
+    return;
+  }
+
+  const evenNumbers = numbers.filter(num => num % 2 === 0);
+
+  output.textContent = evenNumbers.length
+    ? `Even Numbers: ${evenNumbers.join(", ")}`
+    : "No even numbers found!";
+};
+
+  </script>
+</body>
+</html>

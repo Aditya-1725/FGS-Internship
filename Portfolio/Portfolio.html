@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</head>
+<body>
+    <header>
+        <a href="" class="brand">Aditya Vawhal</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <a href="#main" >Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#qualification">Qualification</a>
+            <a href="#project">My Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="darkModeToggle" class="toggle-btn" title="Change theme"><i class="fa-solid fa-moon"></i></button>
+
+    </header>
+
+    <section class="main" id="main">
+        <div class="content">
+            <h2>Hello, I'm <br><span>Vawhal Aditya Dipak</span></h2>
+            <div class="hero-right">
+                <h1>I'm <span id="typed"></span></h1>
+                <p>An innovative developer building next-gen web experiences.</p>
+            </div>
+            <div class="media-icons">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/aditya-vawhal-1725adi" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="resume-btn">
+                <a href="Resume.pdf" target="_blank" class="resumebtn">View Resume</a>
+            </div>
+        </div>
+    </section>
+
+<!--  About Section -->
+
+    <section class="about" id="about">
+        <div class="title reveal">
+            <h2 class="section-title">About me</h2>
+        </div>
+        <div class="content">
+            <div class="column col-left reveal">
+                <div class="img-card">
+                    <img src="./Images/Profile.jpg" alt="">
+                </div>
+            </div>
+            <div class="column col-right reveal">
+                <h2 class="content-title">Hello, My name is Aditya</h2>
+                <p class="paragraph-text"> I'm a Cyber Security student with a passion for web development and secure coding practices.I enjoy designing and building interactive web applications while ensuring they are optimized for performance and security.<br><br>My interests lie in front-end and back-end development, ethical hacking, and safeguarding digital assets from cyber threats.Beyond coding, I stay updated on the latest security trends and enjoy experimenting with new web technologies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-- Skill Section -->
+
+<section class="skills" id="skills">
+    <div class="title">
+        <h2 class="section-title">My Skills</h2>
+    </div>
+    <div class="content">
+        <div class="column col-left">
+            <h2 class="content-title">
+                My Skills
+            </h2>
+            <p class="paragraph-text">
+                As a Cyber Security student with a interest in Computer technologies. I have expertise some skill also Learning Some new Skill and new Programming Languages.I had learned some skill in front-end and back-end technologies, some Programming Languages which are required to make a good web application or Programs.
+            </p>
+        </div>
+        <div class="column col-right">
+            <div class="skills-grid">
+                <div class="skill-item" >HTML & CSS</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">PHP</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">JAVA</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">MYSql</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">C & C++</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">DBMS</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Android Studio</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Qualification Section -->
+
+<section class="qualification" id="qualification">
+    <div class="title">
+        <h2 class="section-title">My Qualifications</h2>
+    </div>
+    <div class="content">
+        <div class="qualification-item">
+            <h3>Bachelor of Technology in Computer SCience and Engineering</h3>
+            <p class="institute">Uka Tarsadia University</p>
+            <p class="details">CGPA: 8.9/10[till SEM - 4]</p>
+            <p class="address">Surat, Gujarat</p>
+        </div>
+        <div class="qualification-item">
+            <h3>Higher Secondary</h3>
+            <p class="institute">Leo School of Science and Commerce</p>
+            <p class="details">Percentage: 65.53% | Percentile: 78.87% | Marks: 426/650</p>
+            <p class="address">Surat, Gujarat</p>
+        </div>
+        <div class="qualification-item">
+            <h3>High School</h3>
+            <p class="institute">Seventh Day Adventist English High School</p>
+            <p class="details">Percentage: 84% | Percentile: 94.15% | Marks: 504/600</p>
+            <p class="address">Surat, Gujarat</p>
+        </div> 
+    </div>
+</section>
+
+
+<!-- Project Modal -->
+<div id="project-modal" class="modal">
+    <div class="modal-content full-screen">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title">Project Title</h2>
+      <p id="modal-description">Project Description</p>
+  
+      <!-- Languages Used Section -->
+      <div class="languages-section">
+        <h4>Languages Used:</h4>
+        <p id="modal-languages"></p>
+      </div>
+  
+      <!-- Image Carousel -->
+      <div class="carousel-container">
+        <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="carousel-slide" id="carousel-slide" title="Drag Image to Open in new tab"></div>
+        <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+  
+      <a id="modal-link" class="btn" target="_blank">View Code</a>
+    </div>
+  </div>
+  
+
+
+
+<!-- Project List -->
+<section class="work" id="projects">
+    <div class="title">
+        <h2 class="section-title">My Projects</h2>
+    </div>
+    <div id="project-discription"> Here is Some Major and Minor Project List. you can Check out.</div>
+    <div class="content">
+        <div class="project-box" onclick="showProject('genius_website')">
+            <h3>Genius Classes Website</h3>
+            <p>A Website for Genius Class with Client specific requirements like for Student info and Classes Advertisement.</p>
+        </div>
+        <div class="project-box" onclick="showProject('weather')">
+            <h3>Weather App</h3>
+            <p>A simple weather application that fetches live weather data.</p>
+        </div>
+        <div class="project-box" onclick="showProject('task manager')">
+            <h3>Task Manager App</h3>
+            <p>An Android app to manage running applications without root access.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="title reveal">
+          <h2 class="section-title">Contact Me</h2>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info">
+                <h3>Address</h3>
+                <span>75, Mahaprabhu Nagar Sr.no:3 , Limbayat, Surat, Gujarat, India</span>
+            </div>
+            </div>
+            <a href="tel:+916355003517" id="contact-style">
+            <div class="card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <span>
+                        +91-6355003517    
+                    </span>
+                </div>
+            </a>
+            </div>
+            <a href="mailto:adityavawhal000@gmail.com" id="contact-style">
+            <div class="card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <h3>Email Address</h3>
+                    <span>
+                        adityavawhal000@gmail.com
+                    </span>
+                </div>
+            </div>
+            </a>
+        </div>
+    </section>
+    <footer class="footer">
+        <span class="footer-title">Vawhal Aditya Dipak</span>
+        <p>Copyright @2025 by Developer Aditya. All Rights Reserved.</p>
+    </footer>
+    <script src="Portfolio.js"></script>
+</body>
+</html>
