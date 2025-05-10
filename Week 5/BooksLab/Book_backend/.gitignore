@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Log files
+npm-debug.log
+yarn-error.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Build output
+dist/
+build/
+
+# Test coverage
+coverage/
+
+# VS Code settings (if you're using VS Code)
+.vscode/
+
+# Optional: you can also ignore any other custom files or folders specific to your project

@@ -70,6 +70,8 @@ function Home() {
     <div className="home">
       <h2>Welcome to the Blog App!</h2>
       <p>Click on the "Posts" tab to browse all blog articles.</p>
+
+    {/* Add more Text if you want to enter on Home tab */}
     </div>
   );
 }
@@ -82,7 +84,7 @@ function Posts() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const postData = await fetchPosts(50); // Fetch 50 posts
+      const postData = await fetchPosts(250); // Fetch 50 posts
       setPosts(postData);
       setLoading(false);
     };
